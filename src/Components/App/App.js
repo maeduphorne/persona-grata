@@ -1,10 +1,17 @@
 import './App.css';
+// import { Link, Route, Switch } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      Hello, world!
-    </div>
+    <main className="App">
+      <header>
+        {/* <Link to="/" className="home-click"> */}
+          <h1>
+            Persona Grata
+          </h1>
+        {/* </Link> */}
+      </header>
+    </main>
   );
 }
 
