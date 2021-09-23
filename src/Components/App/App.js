@@ -15,6 +15,7 @@ const App = () => {
           </h1>
         {/* </Link> */}
       </header>
+      <SuggestedQuestions />
       {/* insert random user component */}
       <RandomUser/>
       {/* insert saved users component */}

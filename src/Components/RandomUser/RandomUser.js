@@ -8,8 +8,28 @@ const RandomUser = () => {
 
     useEffect(() => {
         apiCalls.fetchRandomUser()
+        .then((data) => (
+            data = data.results.reduce((Obj, result) => {
+                Obj.firstName = result.name.first;
+                Obj.lastName = result.name.last;
+                Obj.age = result.dob.age;
+                Obj.gender = result.gender;
+                Obj.city = result.location.city;
+                Obj.state = result.location.state;
+                Obj.country = result.location.country;
+                Obj.username = result.login.username;
+                Obj.password = result.login.password;
+                Obj.photo = result.picture.large;
+                return Obj
+            }, {})))
         .then((data) => setUserInfo(data))
         apiCalls.fetchRandomQuote()
+        .then((data) => (
+            data = {
+                quote: data.content,
+                author: data.author
+            }
+        ))
         .then((data) => setUserQuote(data))
     }, [])
     
@@ -24,3 +44,27 @@ const RandomUser = () => {
 }
 
 export default RandomUser;
+
+
+// user object:
+// {
+// gender: "",
+// firstName: "",
+// lastName: "",
+// age: "",
+// city: "",
+// state: "",
+// country: "",
+// goToPassword: "",
+// picture: ''
+// }
+
+// quote object:
+// {
+// content: "",
+// author: ""
+// }
+
+// quoteObject.reduce((Obj, ) => {
+//     return Obj
+// }, {})
