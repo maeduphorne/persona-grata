@@ -35,7 +35,7 @@ const RandomUser = () => {
         ))
         .then((data) => setUserQuote(data))
     }
-    
+
     useEffect(() => {
         getRandomUser()
         getRandomQuote()
@@ -47,7 +47,6 @@ const RandomUser = () => {
                 Instructions go here
             </h2>
             <section className="user-info">
-                Who am I?
                 <img src={userInfo.photo} alt="Random user headshot"/>
                 <ul>
                     <li>Name: {userInfo.firstName} {userInfo.lastName}</li>
@@ -61,8 +60,8 @@ const RandomUser = () => {
                 </div>
             </section>
             <button>Generate New User</button>
-            <button>Save User to Favorites</button>
-            <button>Got to Favorites</button>
+            <button>Save User Persona</button>
+            <button>Got to Saved Users</button>
         </div>
     )
 }
