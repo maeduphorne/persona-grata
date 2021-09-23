@@ -1,5 +1,5 @@
 import './App.css';
-// import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 
 const App = () => {
   return (
