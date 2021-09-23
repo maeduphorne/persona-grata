@@ -2,11 +2,11 @@ import './SuggestedQuestions.css'
 
 const SuggestedQuestions = () => {
     return (
-        <div>
-            <h2>
+        <aside>
+            <h2 className="questions-header">
                 Questions to ask about your new user:
             </h2>
-            <ul>
+            <ul className="questions-list">
                 <li>What does this user do for a living?</li>
                 <li>What is the user's personality like?</li>
                 <li>What are their likes & dislikes?</li>
@@ -16,7 +16,7 @@ const SuggestedQuestions = () => {
                 <li>Are they tech saavy?</li>
                 <li>What are their habits surrounding technology?</li>
             </ul>
-        </div>
+        </aside>
     )
 }
 
