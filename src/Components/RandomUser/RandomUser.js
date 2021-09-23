@@ -24,3 +24,27 @@ const RandomUser = () => {
 }
 
 export default RandomUser;
+
+
+// user object:
+// {
+// gender: "",
+// firstName: "",
+// lastName: "",
+// age: "",
+// city: "",
+// state: "",
+// country: "",
+// goToPassword: "",
+// picture: ''
+// }
+
+// quote object:
+// {
+// content: "",
+// author: ""
+// }
+
+// quoteObject.reduce((Obj, ) => {
+//     return Obj
+// }, {})
