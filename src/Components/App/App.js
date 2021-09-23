@@ -16,6 +16,7 @@ const App = () => {
         {/* </Link> */}
       </header>
       {/* insert random user component */}
+      <RandomUser/>
       {/* insert saved users component */}
       {/* insert error handling component */}
     </main>
