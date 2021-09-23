@@ -1,5 +1,6 @@
 import './App.css';
 import { Link, Route, Switch } from 'react-router-dom';
+import RandomUser from '../RandomUser/RandomUser';
 
 const App = () => {
   return (
@@ -11,6 +12,9 @@ const App = () => {
           </h1>
         {/* </Link> */}
       </header>
+      {/* insert random user component */}
+      {/* insert saved users component */}
+      {/* insert error handling component */}
     </main>
   );
 }
