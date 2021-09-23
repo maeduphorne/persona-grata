@@ -6,7 +6,7 @@ const RandomUser = () => {
     const [userInfo, setUserInfo] = useState({});
     const [userQuote, setUserQuote] = useState({});
 
-    useEffect(() => {
+    const getRandomUser = () => {
         apiCalls.fetchRandomUser()
         .then((data) => (
             data = data.results.reduce((Obj, result) => {
@@ -23,6 +23,9 @@ const RandomUser = () => {
                 return Obj
             }, {})))
         .then((data) => setUserInfo(data))
+    }
+
+    const getRandomQuote = () => {
         apiCalls.fetchRandomQuote()
         .then((data) => (
             data = {
@@ -31,6 +34,11 @@ const RandomUser = () => {
             }
         ))
         .then((data) => setUserQuote(data))
+    }
+    
+    useEffect(() => {
+        getRandomUser()
+        getRandomQuote()
     }, [])
     
     return (
