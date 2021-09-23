@@ -2,6 +2,7 @@ import './App.css';
 import { Link, Route, Switch } from 'react-router-dom';
 import RandomUser from '../RandomUser/RandomUser';
 import SavedUsers from '../SavedUsers/SavedUsers';
+import ErrorHandling from '../ErrorHandling/ErrorHandling';
 
 const App = () => {
   return (
