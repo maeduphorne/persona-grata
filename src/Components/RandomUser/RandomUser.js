@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 const RandomUser = () => {
     const [userInfo, setUserInfo] = useState({});
     const [userQuote, setUserQuote] = useState({});
+    const [btnIsToggled, setbtnIsToggled] = useState(false);
 
     const getRandomUser = () => {
         apiCalls.fetchRandomUser()
@@ -36,10 +37,21 @@ const RandomUser = () => {
         .then((data) => setUserQuote(data))
     }
 
+    const handleNewUser = (event) => {
+        console.log('refresh!')
+        if(!btnIsToggled){
+            setbtnIsToggled(true)
+        } else {
+            setbtnIsToggled(false)
+        }
+        
+    }
+
     useEffect(() => {
         getRandomUser()
         getRandomQuote()
-    }, [])
+        // setbtnIsToggled(true)
+    }, [btnIsToggled])
     
     return (
         <div>
@@ -59,7 +71,7 @@ const RandomUser = () => {
                     My favorite quote: {`${userQuote.quote} - ${userQuote.author}`}
                 </div>
             </section>
-            <button>Generate New User</button>
+            <button onClick={handleNewUser}>Generate New User</button>
             <button>Save User Persona</button>
             <button>Got to Saved Users</button>
         </div>
