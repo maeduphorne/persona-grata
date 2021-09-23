@@ -34,20 +34,25 @@ const RandomUser = () => {
     }, [])
     
     return (
-        <section className="user-info">
-            Who am I?
-            <img src={userInfo.photo} alt="Random user headshot"/>
-            <ul>
-                <li>Name: {userInfo.firstName} {userInfo.lastName}</li>
-                <li>Age: {userInfo.age}</li>
-                <li>Gender: {userInfo.gender}</li>
-                <li>Location: {`${userInfo.city}, ${userInfo.state}, ${userInfo.country}`}</li>
-                <li>Go-to Login: {`Username: ${userInfo.username} & Password: ${userInfo.password}`}</li>
-            </ul>
-            <div className="user-quote">
-                My favorite quote: {`${userQuote.quote} - ${userQuote.author}`}
-            </div>
-        </section>
+        <div>
+            <h2>
+                Instructions go here
+            </h2>
+            <section className="user-info">
+                Who am I?
+                <img src={userInfo.photo} alt="Random user headshot"/>
+                <ul>
+                    <li>Name: {userInfo.firstName} {userInfo.lastName}</li>
+                    <li>Age: {userInfo.age}</li>
+                    <li>Gender: {userInfo.gender}</li>
+                    <li>Location: {`${userInfo.city}, ${userInfo.state}, ${userInfo.country}`}</li>
+                    <li>Go-to Login: {`Username: ${userInfo.username} & Password: ${userInfo.password}`}</li>
+                </ul>
+                <div className="user-quote">
+                    My favorite quote: {`${userQuote.quote} - ${userQuote.author}`}
+                </div>
+            </section>
+        </div>
     )
 }
 
