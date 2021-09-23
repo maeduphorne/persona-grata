@@ -52,6 +52,9 @@ const RandomUser = () => {
                     My favorite quote: {`${userQuote.quote} - ${userQuote.author}`}
                 </div>
             </section>
+            <button>Generate New User</button>
+            <button>Save User to Favorites</button>
+            <button>Got to Favorites</button>
         </div>
     )
 }
