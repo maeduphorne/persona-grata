@@ -3,9 +3,9 @@ import './SuggestedQuestions.css'
 const SuggestedQuestions = () => {
     return (
         <aside>
-            <h2 className="questions-header">
+            <h3 className="questions-header">
                 Questions to ask about your new user:
-            </h2>
+            </h3>
             <ul className="questions-list">
                 <li>What does this user do for a living?</li>
                 <li>What is the user's personality like?</li>

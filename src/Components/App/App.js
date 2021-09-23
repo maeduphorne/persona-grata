@@ -15,11 +15,13 @@ const App = () => {
           </h1>
         {/* </Link> */}
       </header>
-      <SuggestedQuestions />
-      {/* insert random user component */}
-      <RandomUser/>
-      {/* insert saved users component */}
-      {/* insert error handling component */}
+      <div className="main-section-wrapper">
+        <SuggestedQuestions />
+        {/* insert random user component */}
+        <RandomUser/>
+        {/* insert saved users component */}
+        {/* insert error handling component */}
+      </div>
     </main>
   );
 }
