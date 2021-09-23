@@ -1,6 +1,7 @@
 import './App.css';
 import { Link, Route, Switch } from 'react-router-dom';
 import RandomUser from '../RandomUser/RandomUser';
+import SavedUsers from '../SavedUsers/SavedUsers';
 
 const App = () => {
   return (
