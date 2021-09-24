@@ -29,10 +29,11 @@ const [savedUsersQuote, setSavedUsersQuote] = useState([])
         {/* insert random user component */}
         {/* Route to homepage */}
         <RandomUser savedUsersInfo={savedUsersInfo} setSavedUsersInfo={setSavedUsersInfo} savedUsersQuote={savedUsersQuote} setSavedUsersQuote={setSavedUsersQuote}/>
-        {/* Route to saved users */}
         {/* insert saved users component */}
         {/* insert error handling component */}
       </div>
+        {/* Route to saved users */}
+        <SavedUsers savedUsersInfo={savedUsersInfo} savedUsersQuote={savedUsersQuote} />
     </main>
   );
 }
