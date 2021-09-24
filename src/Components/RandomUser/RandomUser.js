@@ -1,6 +1,7 @@
 import './RandomUser.css'
 import apiCalls from '../../apiCalls';
 import { useEffect, useState } from 'react';
+import UserCard from '../UserCard/UserCard';
 
 const RandomUser = ({ savedUsersInfo, setSavedUsersInfo, savedUsersQuote, setSavedUsersQuote }) => {
   // bring in savedUsers from App as a prop
@@ -73,19 +74,7 @@ return (
       <h2>
           Instructions go here
       </h2>
-      <section className="user-info">
-          <img src={userInfo.photo} alt="Random user headshot"/>
-          <ul>
-              <li>Name: {userInfo.firstName} {userInfo.lastName}</li>
-              <li>Age: {userInfo.age}</li>
-              <li>Gender: {userInfo.gender}</li>
-              <li>Location: {`${userInfo.city}, ${userInfo.state}, ${userInfo.country}`}</li>
-              <li>First AIM screenname: {`Username: ${userInfo.username}`}</li>
-          </ul>
-          <div className="user-quote">
-              My favorite quote: {`${userQuote.quote} - ${userQuote.author}`}
-          </div>
-      </section>
+      <UserCard userInfo={userInfo} userQuote={userQuote} />
       <button onClick={handleNewUser}>Generate New User</button>
       <button onClick={handleSavedUsersClick}>Save User Persona</button>
       {/* Wrap in Link(link styled like a button) */}
