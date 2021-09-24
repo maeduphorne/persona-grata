@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 
 const RandomUser = () => {
   // bring in savedUsers from App as a prop
-const [userInfo, setUserInfo] = useState({});
-    const [userQuote, setUserQuote] = useState({});
+  const [userInfo, setUserInfo] = useState({});
+  const [userQuote, setUserQuote] = useState({});
   const [btnIsToggled, setbtnIsToggled] = useState(false);
 
   const getRandomUser = () => {
@@ -39,7 +39,6 @@ const getRandomQuote = () => {
 }
 
 const handleNewUser = (event) => {
-  console.log('refresh!')
   if(!btnIsToggled){
     setbtnIsToggled(true)
   } else {
@@ -73,6 +72,7 @@ return (
       </section>
       <button onClick={handleNewUser}>Generate New User</button>
       <button>Save User Persona</button>
+      {/* Wrap in Link(link styled like a button) */}
       <button>Go to Saved Users</button>
   </div>
 )

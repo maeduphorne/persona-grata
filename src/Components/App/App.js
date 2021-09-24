@@ -23,7 +23,9 @@ const App = () => {
       <div className="main-section-wrapper">
         <SuggestedQuestions />
         {/* insert random user component */}
+        {/* Route to homepage */}
         <RandomUser/>
+        {/* Route to saved users */}
         {/* insert saved users component */}
         {/* insert error handling component */}
       </div>
