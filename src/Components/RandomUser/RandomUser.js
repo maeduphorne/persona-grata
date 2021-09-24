@@ -2,7 +2,7 @@ import './RandomUser.css'
 import apiCalls from '../../apiCalls';
 import { useEffect, useState } from 'react';
 
-const RandomUser = ({ savedUsers, setSavedUsers }) => {
+const RandomUser = ({ savedUsersInfo, setSavedUsersInfo, savedUsersQuote, setSavedUsersQuote }) => {
   // bring in savedUsers from App as a prop
   const [userInfo, setUserInfo] = useState({});
   const [userQuote, setUserQuote] = useState({});
@@ -23,13 +23,6 @@ const RandomUser = ({ savedUsers, setSavedUsers }) => {
           Obj.photo = result.picture.large;
           return Obj
         }, {})))
-        .then(apiCalls.fetchRandomQuote())
-        // .then((data) => (
-        //     data = {
-        //       quote: data.content,
-        //       author: data.author
-        //     }
-        // ))
     .then((data) => setUserInfo(data))
 }
 
@@ -44,6 +37,13 @@ const getRandomQuote = () => {
   .then((data) => setUserQuote(data))
 }
 
+// const getRandomQuote = () => {
+//   apiCalls.fetchRandomQuote()
+//   .then((data) => (userInfo.quote = data.content))
+  // .then((data) => (userInfo.author = data.author))
+  // .then((data) => setUserInfo(data))
+// }
+
 const handleNewUser = (event) => {
   if(!btnIsToggled){
     setbtnIsToggled(true)
@@ -53,8 +53,12 @@ const handleNewUser = (event) => {
 }
 
 const handleSavedUsersClick = () => {
-  if(!savedUsers.includes(userInfo)){
-    setSavedUsers([...savedUsers, userInfo])
+  if(!savedUsersInfo.includes(userInfo)){
+    setSavedUsersInfo([...savedUsersInfo, userInfo])
+  };
+  
+  if(!savedUsersQuote.includes(userQuote)){
+    setSavedUsersQuote([...savedUsersQuote, userQuote])
   }
 }
 
