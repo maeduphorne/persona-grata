@@ -6,6 +6,7 @@ import ErrorHandling from '../ErrorHandling/ErrorHandling';
 import SuggestedQuestions from '../SuggestedQuestions/SuggestedQuestions';
 
 // set new state property for savedUsers
+const [savedUsers, setSavedUsers] = setState([])
 // handleClick function for saved user button
 // saves new user to the savedUsers array if it doesn't already contain that user
 // pass this function as a prop for Random User so it can be executed on click
