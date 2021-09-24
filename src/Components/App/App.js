@@ -8,6 +8,11 @@ import SuggestedQuestions from '../SuggestedQuestions/SuggestedQuestions';
 // set new state property for savedUsers
 const [savedUsers, setSavedUsers] = setState([])
 // handleClick function for saved user button
+const handleSavedUsersClick = () => {
+  if(!savedUsers.includes(userInfo)){
+    setSavedUsers([...savedUsers, userInfo])
+  }
+}
 // saves new user to the savedUsers array if it doesn't already contain that user
 // pass this function as a prop for Random User so it can be executed on click
 
@@ -25,7 +30,7 @@ const App = () => {
         <SuggestedQuestions />
         {/* insert random user component */}
         {/* Route to homepage */}
-        <RandomUser/>
+        <RandomUser savedUsers={savedUsers} setSavedUsers={handleSavedUsersClick}/>
         {/* Route to saved users */}
         {/* insert saved users component */}
         {/* insert error handling component */}
