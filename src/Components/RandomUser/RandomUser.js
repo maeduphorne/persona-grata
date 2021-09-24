@@ -76,7 +76,7 @@ return (
               <li>Age: {userInfo.age}</li>
               <li>Gender: {userInfo.gender}</li>
               <li>Location: {`${userInfo.city}, ${userInfo.state}, ${userInfo.country}`}</li>
-              <li>First AIM screenname: {`${userInfo.username}`}</li>
+              <li>First AIM screenname: {`Username: ${userInfo.username}`}</li>
           </ul>
           <div className="user-quote">
               My favorite quote: {`${userQuote.quote} - ${userQuote.author}`}
