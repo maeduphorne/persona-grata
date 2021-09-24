@@ -2,7 +2,7 @@ import './RandomUser.css'
 import apiCalls from '../../apiCalls';
 import { useEffect, useState } from 'react';
 
-const RandomUser = () => {
+const RandomUser = ({ savedUsers, setSavedUsers }) => {
   // bring in savedUsers from App as a prop
   const [userInfo, setUserInfo] = useState({});
   const [userQuote, setUserQuote] = useState({});
@@ -20,10 +20,16 @@ const RandomUser = () => {
           Obj.state = result.location.state;
           Obj.country = result.location.country;
           Obj.username = result.login.username;
-          Obj.password = result.login.password;
           Obj.photo = result.picture.large;
           return Obj
         }, {})))
+        .then(apiCalls.fetchRandomQuote())
+        // .then((data) => (
+        //     data = {
+        //       quote: data.content,
+        //       author: data.author
+        //     }
+        // ))
     .then((data) => setUserInfo(data))
 }
 
@@ -46,6 +52,12 @@ const handleNewUser = (event) => {
   }
 }
 
+const handleSavedUsersClick = () => {
+  if(!savedUsers.includes(userInfo)){
+    setSavedUsers([...savedUsers, userInfo])
+  }
+}
+
 useEffect(() => {
   getRandomUser()
   getRandomQuote()
@@ -64,14 +76,14 @@ return (
               <li>Age: {userInfo.age}</li>
               <li>Gender: {userInfo.gender}</li>
               <li>Location: {`${userInfo.city}, ${userInfo.state}, ${userInfo.country}`}</li>
-              <li>Go-to Login: {`Username: ${userInfo.username} & Password: ${userInfo.password}`}</li>
+              <li>First AIM screenname: {`${userInfo.username}`}</li>
           </ul>
           <div className="user-quote">
               My favorite quote: {`${userQuote.quote} - ${userQuote.author}`}
           </div>
       </section>
       <button onClick={handleNewUser}>Generate New User</button>
-      <button>Save User Persona</button>
+      <button onClick={handleSavedUsersClick}>Save User Persona</button>
       {/* Wrap in Link(link styled like a button) */}
       <button>Go to Saved Users</button>
   </div>
