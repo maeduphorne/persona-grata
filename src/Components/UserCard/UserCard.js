@@ -1,6 +1,6 @@
 import './UserCard.css'
 
-const UserCard = ({ userInfo, userQuote }) => {
+const UserCard = ({ userInfo }) => {
   //move JSX to render a user into card
   // this will be a child of saved users & RandomUser(import in both)
   return(
@@ -13,9 +13,9 @@ const UserCard = ({ userInfo, userQuote }) => {
           <li>Location: {`${userInfo.city}, ${userInfo.state}, ${userInfo.country}`}</li>
           <li>First AIM screenname: {`Username: ${userInfo.username}`}</li>
       </ul>
-      <div className="user-quote">
+      {/* <div className="user-quote">
           My favorite quote: {`${userQuote.quote} - ${userQuote.author}`}
-      </div>
+      </div> */}
     </section>
   )
 }
