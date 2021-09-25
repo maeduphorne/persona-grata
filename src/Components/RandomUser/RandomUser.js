@@ -91,7 +91,6 @@ return (
       <UserCard userInfo={userInfo} />
       <button onClick={handleNewUser}>Generate New User</button>
       <button onClick={handleSavedUsersClick}>Save User Persona</button>
-      {/* Wrap in Link(link styled like a button) */}
   </div>
 )
 }
