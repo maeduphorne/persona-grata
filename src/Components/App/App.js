@@ -17,29 +17,35 @@ const [savedUsersInfo, setSavedUsersInfo] = useState([])
           <h1>Persona Grata</h1>
         </Link>
       </header>
-      <div className="main-section-wrapper">
-        <SuggestedQuestions />
-        <Switch>
-          <Route 
-            exact path='/' 
-            render={() => 
-              <div>
-                <NavLink className='saved-link' to='/savedUsers'>View Saved Users</NavLink>
+      <Switch>
+        <Route 
+          exact path='/' 
+          render={() => 
+            <div>
+              <NavLink className='saved-link' to='/savedUsers'>View Saved Users</NavLink>
+              <div className="main-section-wrapper">
+                <SuggestedQuestions />
                 <RandomUser savedUsersInfo={savedUsersInfo} setSavedUsersInfo={setSavedUsersInfo} />
               </div>
-            }
-          />
-          <Route 
-            exact path='/savedUsers' 
-            render={() =>
-              <div>
-                <NavLink className='home-link' to='/'>Take Me Home</NavLink>
+            </div>
+          }
+        />
+        <Route 
+          exact path='/savedUsers' 
+          render={() =>
+            <div>
+              <NavLink className='home-link' to='/'>Take Me Home</NavLink>
+              <div className="main-section-wrapper">
+                <SuggestedQuestions />
                 <SavedUsers savedUsersInfo={savedUsersInfo}/>
               </div>
-            }
-          />
-        </Switch>
-      </div>
+            </div>
+          }
+        />
+        <Route 
+          render={() => <ErrorHandling />}
+        />
+      </Switch>
     </main>
   );
 }

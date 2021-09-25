@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import UserCard from '../UserCard/UserCard';
 
 const RandomUser = ({ savedUsersInfo, setSavedUsersInfo }) => {
-  // bring in savedUsers from App as a prop
   const [userInfo, setUserInfo] = useState({});
   const [btnIsToggled, setbtnIsToggled] = useState(false);
 

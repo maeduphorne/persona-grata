@@ -1,5 +1,4 @@
 import './SavedUsers.css'
-import { NavLink } from 'react-router-dom'
 import UserCard from '../UserCard/UserCard';
 
 const SavedUsers = ({ savedUsersInfo }) => {
