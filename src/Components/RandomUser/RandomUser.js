@@ -9,23 +9,54 @@ const RandomUser = ({ savedUsersInfo, setSavedUsersInfo, savedUsersQuote, setSav
   // const [userQuote, setUserQuote] = useState({});
   const [btnIsToggled, setbtnIsToggled] = useState(false);
 
-  const getRandomUser = () => {
-    apiCalls.fetchRandomUser()
-    .then((data) => (
-        data = data.results.reduce((Obj, result) => {
-          Obj.firstName = result.name.first;
-          Obj.lastName = result.name.last;
-          Obj.age = result.dob.age;
-          Obj.gender = result.gender;
-          Obj.city = result.location.city;
-          Obj.state = result.location.state;
-          Obj.country = result.location.country;
-          Obj.username = result.login.username;
-          Obj.photo = result.picture.large;
-          return Obj
-        }, {})))
-    .then((data) => setUserInfo(data))
+  const fetchUser = () => {
+    return Promise.all([apiCalls.fetchRandomUser(), apiCalls.fetchRandomQuote()])
+  }
+
+    const getRandomUser = () => {
+    let data;
+    fetchUser()
+    .then((promises) => {
+      console.log(promises)
+      data = promises[0].results.reduce((Obj, result) => {
+        console.log(result)
+        Obj.firstName = result.name.first;
+        Obj.lastName = result.name.last;
+        Obj.age = result.dob.age;
+        Obj.gender = result.gender;
+        Obj.city = result.location.city;
+        Obj.state = result.location.state;
+        Obj.country = result.location.country;
+        Obj.username = result.login.username;
+        Obj.photo = result.picture.large;
+        return Obj
+        }, {})
+        console.log('data after reduce', data)
+      data.quote = promises[1].content
+      console.log('data after reduce and add quote', data)
+      data.author = promises[1].author
+      console.log('data after function', data)
+      setUserInfo(data)
+      // .then((data) => setUserInfo(data))
+    })
 }
+//   const getRandomUser = () => {
+//     apiCalls.fetchRandomUser()
+//     .then((data) => (
+//         data = data.results.reduce((Obj, result) => {
+//           Obj.firstName = result.name.first;
+//           Obj.lastName = result.name.last;
+//           Obj.age = result.dob.age;
+//           Obj.gender = result.gender;
+//           Obj.city = result.location.city;
+//           Obj.state = result.location.state;
+//           Obj.country = result.location.country;
+//           Obj.username = result.login.username;
+//           Obj.photo = result.picture.large;
+//           return Obj
+//         }, {})))
+//     .then((data) => setUserInfo(data))
+// }
 
 // const getRandomQuote = () => {
 //   apiCalls.fetchRandomQuote()
