@@ -38,6 +38,9 @@ const [savedUsersInfo, setSavedUsersInfo] = useState([])
               </div>
             }
           />
+          <Route 
+            render={() => <ErrorHandling />}
+          />
         </Switch>
       </div>
     </main>
