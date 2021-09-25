@@ -31,13 +31,9 @@ const RandomUser = ({ savedUsersInfo, setSavedUsersInfo, savedUsersQuote, setSav
         Obj.photo = result.picture.large;
         return Obj
         }, {})
-        console.log('data after reduce', data)
       data.quote = promises[1].content
-      console.log('data after reduce and add quote', data)
       data.author = promises[1].author
-      console.log('data after function', data)
       setUserInfo(data)
-      // .then((data) => setUserInfo(data))
     })
 }
 //   const getRandomUser = () => {
