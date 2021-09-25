@@ -21,17 +21,24 @@ const [savedUsersInfo, setSavedUsersInfo] = useState([])
           <h1>Persona Grata</h1>
         </Link>
         <NavLink className='saved-link' to='/savedUsers'>View Saved Users</NavLink>
-      </header>
+      </header>;
       <div className="main-section-wrapper">
         <SuggestedQuestions />
         {/* insert random user component */}
         {/* Route to homepage */}
-        <RandomUser savedUsersInfo={savedUsersInfo} setSavedUsersInfo={setSavedUsersInfo} />
+        <Route 
+          exact path="/" 
+          render={() => <RandomUser savedUsersInfo={savedUsersInfo} setSavedUsersInfo={setSavedUsersInfo} />}
+        />
         {/* insert saved users component */}
         {/* insert error handling component */}
       </div>
         {/* Route to saved users */}
-        <SavedUsers savedUsersInfo={savedUsersInfo}/// 
+        <Route 
+          exact path="/savedUsers" 
+          render={() => <SavedUsers savedUsersInfo={savedUsersInfo}}
+        />
+        /// 
         // savedUsersQuote={savedUsersQuote} 
         />
     </main>
