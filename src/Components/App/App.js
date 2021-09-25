@@ -24,23 +24,21 @@ const [savedUsersInfo, setSavedUsersInfo] = useState([])
       </header>;
       <div className="main-section-wrapper">
         <SuggestedQuestions />
-        {/* insert random user component */}
-        {/* Route to homepage */}
-        <Route 
-          exact path="/" 
-          render={() => <RandomUser savedUsersInfo={savedUsersInfo} setSavedUsersInfo={setSavedUsersInfo} />}
-        />
-        {/* insert saved users component */}
-        {/* insert error handling component */}
+        <Switch>
+          <Route 
+            exact path='/' 
+            render={() => 
+              <RandomUser savedUsersInfo={savedUsersInfo} setSavedUsersInfo={setSavedUsersInfo} />
+            }
+          />
+          <Route 
+            exact path='/savedUsers' 
+            render={() => 
+              <SavedUsers savedUsersInfo={savedUsersInfo}/>
+            }
+          />
+        </Switch>
       </div>
-        {/* Route to saved users */}
-        <Route 
-          exact path="/savedUsers" 
-          render={() => <SavedUsers savedUsersInfo={savedUsersInfo}}
-        />
-        /// 
-        // savedUsersQuote={savedUsersQuote} 
-        />
     </main>
   );
 }
