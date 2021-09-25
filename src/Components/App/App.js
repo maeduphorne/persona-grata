@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, NavLink, Route, Switch } from 'react-router-dom';
 import RandomUser from '../RandomUser/RandomUser';
 import SavedUsers from '../SavedUsers/SavedUsers';
 import ErrorHandling from '../ErrorHandling/ErrorHandling';
@@ -20,6 +20,7 @@ const [savedUsersInfo, setSavedUsersInfo] = useState([])
         <Link to="/" className="home-click">
           <h1>Persona Grata</h1>
         </Link>
+        <NavLink className='saved-link' to='/savedUsers'>View Saved Users</NavLink>
       </header>
       <div className="main-section-wrapper">
         <SuggestedQuestions />
