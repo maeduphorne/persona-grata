@@ -28,7 +28,9 @@ const [savedUsersQuote, setSavedUsersQuote] = useState([])
         <SuggestedQuestions />
         {/* insert random user component */}
         {/* Route to homepage */}
-        <RandomUser savedUsersInfo={savedUsersInfo} setSavedUsersInfo={setSavedUsersInfo} savedUsersQuote={savedUsersQuote} setSavedUsersQuote={setSavedUsersQuote}/>
+        <RandomUser savedUsersInfo={savedUsersInfo} setSavedUsersInfo={setSavedUsersInfo} 
+        // savedUsersQuote={savedUsersQuote} setSavedUsersQuote={setSavedUsersQuote}
+        />
         {/* insert saved users component */}
         {/* insert error handling component */}
       </div>
