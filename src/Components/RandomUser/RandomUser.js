@@ -3,10 +3,9 @@ import apiCalls from '../../apiCalls';
 import { useEffect, useState } from 'react';
 import UserCard from '../UserCard/UserCard';
 
-const RandomUser = ({ savedUsersInfo, setSavedUsersInfo, savedUsersQuote, setSavedUsersQuote }) => {
+const RandomUser = ({ savedUsersInfo, setSavedUsersInfo }) => {
   // bring in savedUsers from App as a prop
   const [userInfo, setUserInfo] = useState({});
-  // const [userQuote, setUserQuote] = useState({});
   const [btnIsToggled, setbtnIsToggled] = useState(false);
 
   const fetchUser = () => {
@@ -65,13 +64,6 @@ const RandomUser = ({ savedUsersInfo, setSavedUsersInfo, savedUsersQuote, setSav
 //   .then((data) => setUserQuote(data))
 // }
 
-// const getRandomQuote = () => {
-//   apiCalls.fetchRandomQuote()
-//   .then((data) => (userInfo.quote = data.content))
-  // .then((data) => (userInfo.author = data.author))
-  // .then((data) => setUserInfo(data))
-// }
-
 const handleNewUser = (event) => {
   if(!btnIsToggled){
     setbtnIsToggled(true)
@@ -83,16 +75,11 @@ const handleNewUser = (event) => {
 const handleSavedUsersClick = () => {
   if(!savedUsersInfo.includes(userInfo)){
     setSavedUsersInfo([...savedUsersInfo, userInfo])
-  };
-  
-  // if(!savedUsersQuote.includes(userQuote)){
-  //   setSavedUsersQuote([...savedUsersQuote, userQuote])
-  // }
+  }
 }
 
 useEffect(() => {
   getRandomUser()
-  // getRandomQuote()
   // setbtnIsToggled(true)
 }, [btnIsToggled])
 
@@ -101,9 +88,7 @@ return (
       <h2>
           Instructions go here
       </h2>
-      <UserCard userInfo={userInfo} 
-      // userQuote={userQuote} 
-      />
+      <UserCard userInfo={userInfo} />
       <button onClick={handleNewUser}>Generate New User</button>
       <button onClick={handleSavedUsersClick}>Save User Persona</button>
       {/* Wrap in Link(link styled like a button) */}

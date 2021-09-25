@@ -1,8 +1,6 @@
 import './UserCard.css'
 
 const UserCard = ({ userInfo }) => {
-  //move JSX to render a user into card
-  // this will be a child of saved users & RandomUser(import in both)
   return(
     <section className="user-info">
       <img src={userInfo.photo} alt="Random user headshot"/>
