@@ -17,11 +17,9 @@ const [savedUsersInfo, setSavedUsersInfo] = useState([])
   return (
     <main className="App">
       <header>
-        {/* <Link to="/" className="home-click"> */}
-          <h1>
-            Persona Grata
-          </h1>
-        {/* </Link> */}
+        <Link to="/" className="home-click">
+          <h1>Persona Grata</h1>
+        </Link>
       </header>
       <div className="main-section-wrapper">
         <SuggestedQuestions />
@@ -32,7 +30,7 @@ const [savedUsersInfo, setSavedUsersInfo] = useState([])
         {/* insert error handling component */}
       </div>
         {/* Route to saved users */}
-        <SavedUsers savedUsersInfo={savedUsersInfo} 
+        <SavedUsers savedUsersInfo={savedUsersInfo}/// 
         // savedUsersQuote={savedUsersQuote} 
         />
     </main>
