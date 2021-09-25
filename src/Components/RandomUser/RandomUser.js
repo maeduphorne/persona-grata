@@ -88,8 +88,8 @@ return (
           Instructions go here
       </h2>
       <UserCard userInfo={userInfo} />
-      <button onClick={handleNewUser}>Generate New User</button>
-      <button onClick={handleSavedUsersClick}>Save User Persona</button>
+      <button className="generate-user-btn" onClick={handleNewUser}>Generate New User</button>
+      <button className="save-user-btn" onClick={handleSavedUsersClick}>Save User Persona</button>
   </div>
 )
 }
