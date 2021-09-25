@@ -2,7 +2,9 @@ import './ErrorHandling.css'
 
 const ErrorHandling = () => {
   return(
-    <div>Something went wrong! Please try again.</div>
+    <main>
+      Oops - something went wrong! Please go back to the home page & try again.
+    </main>
   )
 }
 
