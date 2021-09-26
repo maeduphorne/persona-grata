@@ -86,8 +86,8 @@ useEffect(() => {
 return (
   <div>
       <h2 className="instructions">
-        Below is a random user for User Persona inspiration.
-        Read their randomly generated details carefully and let your imagination run wild!
+        Below is a random user to help inspire you while creating a User Persona.<br></br>
+        Read their randomly generated details carefully and let your imagination run wild!<br></br>
         Refer to the Suggested Questions section for assistance in thinking through your user's personality.
       </h2>
       {/* { userInfo && */}
