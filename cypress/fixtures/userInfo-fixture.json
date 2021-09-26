@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+    "gender": "female",
+    "name": {
+      "title": "Miss",
+      "first": "Zoe",
+      "last": "Brown"
+    },
+    "location": {
+      "street": {
+        "number": 6135,
+        "name": "Duke St"
+      },
+      "city": "Armstrong",
+      "state": "Prince Edward Island",
+      "country": "Canada",
+      "postcode": "K4K 0X5",
+      "coordinates": {
+        "latitude": "-66.6516",
+        "longitude": "142.8873"
+      },
+      "timezone": {
+        "offset": "-3:30",
+        "description": "Newfoundland"
+      }
+    },
+    "email": "zoe.brown@example.com",
+    "login": {
+      "uuid": "f225960b-07c2-4a45-8acb-01cd978488b4",
+      "username": "sadbird195",
+      "password": "samuel",
+      "salt": "CXkPruFN",
+      "md5": "9bdecc895b3c9335ba10bc4e76d71483",
+      "sha1": "e35d7df6187817ffeaaafc9d3f167204a9516738",
+      "sha256": "26959be72248287a99226f6e70eb4ed39ecabff1ae231ced83888de87b812ad8"
+    },
+    "dob": {
+      "date": "1985-04-01T17:30:10.966Z",
+      "age": 36
+    },
+    "registered": {
+      "date": "2016-07-22T07:01:36.003Z",
+      "age": 5
+    },
+    "phone": "453-557-2272",
+    "cell": "029-214-9567",
+    "id": {
+      "name": "",
+      "value": null
+    },
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/women/58.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/women/58.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/58.jpg"
+    },
+    "nat": "CA"
+    }
+  ],
+  "info": {
+    "seed": "aacbdf6d65d19054",
+    "results": 1,
+    "page": 1,
+    "version": "1.3"
+  }
+  }
