@@ -1,0 +1,18 @@
+
+h2 {
+  font-size: medium;
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: center;
+
+}
+button {
+  padding: 5px;
+  margin: 2%;
+  border-radius: 3px;
+  border: none;
+  background-color: darkgoldenrod;
+  font-size: large;
+}

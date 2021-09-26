@@ -21,7 +21,7 @@ const [savedUsersInfo, setSavedUsersInfo] = useState([])
         <Route 
           exact path='/' 
           render={() => 
-            <div>
+            <div className="main-page-wrapper">
               <NavLink className='saved-link' to='/savedUsers'>View Saved Users</NavLink>
               <div className="main-section-wrapper">
                 <SuggestedQuestions />

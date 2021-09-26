@@ -93,8 +93,10 @@ return (
       {/* { userInfo && */}
       <section className="random-user-section">
         <UserCard userInfo={userInfo} />
-        <button className="generate-user-btn" onClick={handleNewUser}>Generate New User</button>
-        <button className="save-user-btn" onClick={handleSavedUsersClick}>Save User Persona</button>
+        <div className="button-wrapper">
+          <button className="generate-user-btn" onClick={handleNewUser}>Generate New User</button>
+          <button className="save-user-btn" onClick={handleSavedUsersClick}>Save User Persona</button>
+        </div>
       </section>
       {/* } */}
       {/* {!userInfo && userInfoError && <section className="user-error"> {userInfoError} </section>} */}
