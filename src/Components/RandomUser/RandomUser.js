@@ -17,7 +17,7 @@ const RandomUser = ({ savedUsersInfo, setSavedUsersInfo }) => {
     .then((promises) => {
       console.log(promises)
       data = promises[0].results.reduce((Obj, result) => {
-        console.log(result)
+        Obj.id = result.login.uuid;
         Obj.firstName = result.name.first;
         Obj.lastName = result.name.last;
         Obj.age = result.dob.age;
