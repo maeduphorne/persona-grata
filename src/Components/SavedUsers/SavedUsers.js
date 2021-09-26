@@ -10,7 +10,10 @@ const SavedUsers = ({ savedUsersInfo }) => {
     )
   })
   
-  return <div className="saved-container">{savedUserCards}</div>
+  return (
+    <div className="saved-container">{savedUserCards}</div>
+    //add error message if there are no saved users
+  )
 }
 
 export default SavedUsers;

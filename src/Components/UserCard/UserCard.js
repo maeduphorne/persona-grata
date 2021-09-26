@@ -1,6 +1,6 @@
 import './UserCard.css'
 
-const UserCard = ({ userInfo }) => {
+const UserCard = ({ key, userInfo }) => {
   return(
     <section className="user-info">
       <img src={userInfo.photo} alt="Random user headshot" className='user-photo'/>
