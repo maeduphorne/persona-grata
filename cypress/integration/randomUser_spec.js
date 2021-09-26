@@ -14,14 +14,17 @@ describe('Main page render', () => {
       .first().contains('What does this user do for a living?')
   })
 
-  it('Should display instructions & a random user on load', () => {
+  it('Should display instructions & a user on load', () => {
+    cy.intercept('https://randomuser.me/api/', {fixture: 'userInfo-fixture.json'})
+      .intercept('https://api.quotable.io/random?tags=famous-quotes', {fixture: 'userQuote-fixture.json'})
+      .visit('http://localhost:3000/')
     cy.get('h2').contains('Below is a random user for User Persona inspiration.')
     cy.get('.user-info').should('be.visible')
-    cy.get('.user-name').should('be.visible').contains('Name:')
-    cy.get('.user-age').should('be.visible').contains('Age:')
-    cy.get('.user-gender').should('be.visible').contains('Gender:')
-    cy.get('.user-location').should('be.visible').contains('Location:')
-    cy.get('.user-quote').should('be.visible').contains('My favorite quote:')
+    cy.get('.user-name').should('be.visible').contains('Zoe')
+    cy.get('.user-age').should('be.visible').contains('36')
+    cy.get('.user-gender').should('be.visible').contains('female')
+    cy.get('.user-location').should('be.visible').contains('Armstrong')
+    cy.get('.user-quote').should('be.visible').contains('A house divided against itself cannot stand.')
   })
 
   it('Should have a button to generate another user or save a user', () => {
