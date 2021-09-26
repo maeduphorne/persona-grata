@@ -24,14 +24,17 @@ describe('Saved User page render', () => {
     cy.get('.user-info').should(($userInfo) => {
       expect($userInfo).to.have.length(2)
     })
-    
   })
 
   it('Each card should contain the user\'s information', () => {
-    
+    cy.get('.user-info').first()
+    .get('.user-name').should('be.visible').contains('Name:')
+    .get('.user-age').should('be.visible').contains('Age:')
+    .get('.user-gender').should('be.visible').contains('Gender:')
   })
 
   it('Should have a button to navigate back to the home page', () => {
-    
+    cy.get('.home-link').should('be.visible').click()
+    cy.url().should('eq', 'http://localhost:3000/')
   })
 })
