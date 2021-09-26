@@ -15,7 +15,7 @@ describe('Main page render', () => {
   })
 
   it('Should display instructions & a random user on load', () => {
-    cy.get('h2').contains('Instructions')
+    cy.get('h2').contains('Below is a random user for User Persona inspiration.')
     cy.get('.user-info').should('be.visible')
     cy.get('.user-name').should('be.visible').contains('Name:')
     cy.get('.user-age').should('be.visible').contains('Age:')
