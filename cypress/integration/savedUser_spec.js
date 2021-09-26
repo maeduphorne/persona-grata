@@ -15,11 +15,16 @@ describe('Saved User page render', () => {
   })
 
   it('Should display a set of suggested questions on load', () => {
-    
+    cy.get('aside').contains('Questions to ask about your new user:')
+    cy.get('.questions-list').should('be.visible')
+      .first().contains('What does this user do for a living?')
   })
 
   it('Should display multiple user cards', () => {
-
+    cy.get('.user-info').should(($userInfo) => {
+      expect($userInfo).to.have.length(2)
+    })
+    
   })
 
   it('Each card should contain the user\'s information', () => {

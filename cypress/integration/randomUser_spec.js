@@ -25,7 +25,7 @@ describe('Main page render', () => {
   })
 
   it('Should have a button to generate another user or save a user', () => {
-    cy.get('.generate-user-btn').click()
+    cy.get('.generate-user-btn').should('be.visible').click()
     cy.get('.save-user-btn').click()
   })
 
