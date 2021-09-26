@@ -37,4 +37,12 @@ describe('Main page render', () => {
     cy.url().should('eq', 'http://localhost:3000/savedUsers')
     // Should contain the error message saying there are no saved users
   })
+
+  // it('Should display an error message when the server returns a 400 error', () => {
+  //   cy
+  //     .intercept('https://randomuser.me/api/', {statusCode: 404})
+  //     .visit('http://localhost:3000/')
+  //     .get('.user-error')
+  //     .should('contain', 'Unable to find a user. Please refresh the page or try again later.')
+  // })
 })
