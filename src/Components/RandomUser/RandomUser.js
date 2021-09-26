@@ -83,8 +83,10 @@ useEffect(() => {
 
 return (
   <div>
-      <h2>
-          Instructions go here
+      <h2 className="instructions">
+        Below is a random user for User Persona inspiration.
+        Read their randomly generated details carefully and let your imagination run wild!
+        Refer to the Suggested Questions section for assistance in thinking through your user's personality.
       </h2>
       <UserCard userInfo={userInfo} />
       <button className="generate-user-btn" onClick={handleNewUser}>Generate New User</button>
