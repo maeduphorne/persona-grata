@@ -1,4 +1,5 @@
 import './UserCard.css'
+import PropTypes from 'prop-types';
 
 const UserCard = ({ userInfo }) => {
   return(
@@ -21,3 +22,7 @@ const UserCard = ({ userInfo }) => {
 }
 
 export default UserCard;
+
+UserCard.propTypes = {
+  userInfo: PropTypes.object.isRequired
+};
