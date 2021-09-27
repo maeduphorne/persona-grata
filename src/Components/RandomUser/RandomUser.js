@@ -12,7 +12,7 @@ const RandomUser = ({ savedUsersInfo, setSavedUsersInfo }) => {
     return Promise.all([apiCalls.fetchRandomUser(), apiCalls.fetchRandomQuote()])
   }
 
-    const getRandomUser = () => {
+  const getRandomUser = () => {
     let data;
     fetchUser()
     .then((promises) => {
@@ -34,7 +34,7 @@ const RandomUser = ({ savedUsersInfo, setSavedUsersInfo }) => {
       setUserInfo(data)
     })
     .catch(error => setUserInfoError('Unable to find a user. Please refresh the page or try again later.'))
-}
+  }
 
 const handleNewUser = (event) => {
   if(!btnIsToggled){
@@ -52,26 +52,25 @@ const handleSavedUsersClick = () => {
 
 useEffect(() => {
   getRandomUser()
-  // setbtnIsToggled(true)
 }, [btnIsToggled])
 
 return (
-  <div>
-      <h2 className="instructions">
-        Below is a random user to help inspire you while creating a User Persona.<br></br>
-        Read their randomly generated details carefully and let your imagination run wild!<br></br>
-        Refer to the Suggested Questions section for assistance in thinking through your user's personality.
-      </h2>
-      {!userInfo.length && userInfoError && <section className="user-error"> {userInfoError} </section>}
-      { userInfo &&
-        <section className="random-user-section">
-          <UserCard userInfo={userInfo} />
-          <div className="button-wrapper">
-            <button className="generate-user-btn" onClick={handleNewUser}>Generate New User</button>
-            <button className="save-user-btn" onClick={handleSavedUsersClick}>Save User Persona</button>
-          </div>
-        </section>
-      }
+  <div className= "instructions-and-user-wrapper">
+    <h2 className="instructions">
+      Below is a random user to help inspire you while creating a User Persona.<br></br>
+      Read their randomly generated details carefully and let your imagination run wild!<br></br>
+      Refer to the Suggested Questions section for assistance in thinking through your user's personality.
+    </h2>
+    {!userInfo.length && userInfoError && <section className="user-error"> {userInfoError} </section>}
+    { userInfo &&
+      <section className="random-user-section">
+        <UserCard userInfo={userInfo} />
+        <div className="button-wrapper">
+          <button className="generate-user-btn" onClick={handleNewUser}>Generate New User</button>
+          <button className="save-user-btn" onClick={handleSavedUsersClick}>Save User Persona</button>
+        </div>
+      </section>
+    }
   </div>
 )
 }

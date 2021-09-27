@@ -1,18 +1,20 @@
 import './UserCard.css'
 
-const UserCard = ({ key, userInfo }) => {
+const UserCard = ({ userInfo }) => {
   return(
     <section className="user-info">
       <img src={userInfo.photo} alt="Random user headshot" className='user-photo'/>
-      <ul>
-          <li className='user-name'>Name: {userInfo.firstName} {userInfo.lastName}</li>
-          <li className='user-age'>Age: {userInfo.age}</li>
-          <li className='user-gender'>Gender: {userInfo.gender}</li>
-          <li className='user-location'>Location: {`${userInfo.city}, ${userInfo.state}, ${userInfo.country}`}</li>
-          <li className='user-screenname'>First AIM screenname: {userInfo.username}</li>
-      </ul>
-      <div className="user-quote">
-          My favorite quote: {`${userInfo.quote} - ${userInfo.author}`}
+      <div className="user-card-text">
+        <div className="user-stats">
+            <p className='user-name'>Name: {userInfo.firstName} {userInfo.lastName}</p>
+            <p className='user-age'>Age: {userInfo.age}</p>
+            <p className='user-gender'>Gender: {userInfo.gender}</p>
+            <p className='user-location'>Location: {`${userInfo.city}, ${userInfo.state}, ${userInfo.country}`}</p>
+            <p className='user-screenname'>First AIM screenname: {userInfo.username}</p>
+        </div>
+        <div className="user-quote">
+            My favorite quote: {`${userInfo.quote} - ${userInfo.author}`}
+        </div>
       </div>
     </section>
   )
