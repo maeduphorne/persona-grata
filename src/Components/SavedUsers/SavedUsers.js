@@ -11,8 +11,10 @@ const SavedUsers = ({ savedUsersInfo }) => {
   })
   
   return (
-    <div className="saved-container">{savedUserCards}</div>
-    //add error message if there are no saved users
+    <div className="saved-container">
+      {!savedUsersInfo.length && <h3 className="no-saved">You have not saved any users yet! Please return home to generate a random user</h3>}
+      {savedUserCards}
+    </div>
   )
 }
 
