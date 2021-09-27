@@ -1,3 +1,17 @@
+Cypress.Commands.add('saveUsers', () => {
+  cy.visit('http://localhost:3000/')
+  cy.wait(500)
+  cy.get('.save-user-btn').click()
+  cy.get('.generate-user-btn').click()
+  cy.wait(500)
+  cy.get(".save-user-btn").click()
+  cy.get('.saved-link').click()
+})
+
+
+
+
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
