@@ -22,5 +22,5 @@ const SavedUsers = ({ savedUsersInfo }) => {
 export default SavedUsers;
 
 SavedUsers.propTypes = {
-  savedUsersInfo: PropTypes.array.isRequired
+  savedUsersInfo: PropTypes.arrayOf(PropTypes.object).isRequired
 };

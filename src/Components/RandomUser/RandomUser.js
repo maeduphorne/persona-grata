@@ -79,6 +79,6 @@ return (
 export default RandomUser;
 
 RandomUser.propTypes = {
-  savedUsersInfo: PropTypes.array.isRequired,
+  savedUsersInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
   setSavedUsersInfo: PropTypes.func.isRequired
 };
