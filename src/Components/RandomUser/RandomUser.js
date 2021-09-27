@@ -2,6 +2,7 @@ import './RandomUser.css'
 import apiCalls from '../../apiCalls';
 import { useEffect, useState } from 'react';
 import UserCard from '../UserCard/UserCard';
+import PropTypes from 'prop-types';
 
 const RandomUser = ({ savedUsersInfo, setSavedUsersInfo }) => {
   const [userInfo, setUserInfo] = useState({});
@@ -76,3 +77,8 @@ return (
 }
 
 export default RandomUser;
+
+RandomUser.propTypes = {
+  savedUsersInfo: PropTypes.array,
+  setSavedUsersInfo: PropTypes.func
+};

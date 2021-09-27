@@ -1,5 +1,6 @@
 import './SavedUsers.css'
 import UserCard from '../UserCard/UserCard';
+import PropTypes from 'prop-types';
 
 const SavedUsers = ({ savedUsersInfo }) => {
   const savedUserCards = savedUsersInfo.map((userInfo) => {
@@ -19,3 +20,7 @@ const SavedUsers = ({ savedUsersInfo }) => {
 }
 
 export default SavedUsers;
+
+SavedUsers.propTypes = {
+  savedUsersInfo: PropTypes.array,
+};
