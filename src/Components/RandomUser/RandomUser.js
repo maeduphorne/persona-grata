@@ -35,34 +35,6 @@ const RandomUser = ({ savedUsersInfo, setSavedUsersInfo }) => {
     })
     .catch(error => setUserInfoError('Unable to find a user. Please refresh the page or try again later.'))
 }
-//   const getRandomUser = () => {
-//     apiCalls.fetchRandomUser()
-//     .then((data) => (
-//         data = data.results.reduce((Obj, result) => {
-//           Obj.firstName = result.name.first;
-//           Obj.lastName = result.name.last;
-//           Obj.age = result.dob.age;
-//           Obj.gender = result.gender;
-//           Obj.city = result.location.city;
-//           Obj.state = result.location.state;
-//           Obj.country = result.location.country;
-//           Obj.username = result.login.username;
-//           Obj.photo = result.picture.large;
-//           return Obj
-//         }, {})))
-//     .then((data) => setUserInfo(data))
-// }
-
-// const getRandomQuote = () => {
-//   apiCalls.fetchRandomQuote()
-//   .then((data) => (
-//       data = {
-//         quote: data.content,
-//         author: data.author
-//       }
-//   ))
-//   .then((data) => setUserQuote(data))
-// }
 
 const handleNewUser = (event) => {
   if(!btnIsToggled){
