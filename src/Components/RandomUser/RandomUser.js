@@ -65,7 +65,7 @@ return (
     {!userInfo.length && userInfoError && <section className="user-error"> {userInfoError} </section>}
     { userInfo &&
       <section className="random-user-section">
-        <UserCard userInfo={userInfo} />
+        <UserCard key={userInfo.id} userInfo={userInfo} />
         <div className="button-wrapper">
           <button className="generate-user-btn" onClick={handleNewUser}>Generate New User</button>
           <button className="save-user-btn" onClick={handleSavedUsersClick}>Save User Persona</button>
@@ -79,6 +79,6 @@ return (
 export default RandomUser;
 
 RandomUser.propTypes = {
-  savedUsersInfo: PropTypes.array,
-  setSavedUsersInfo: PropTypes.func
+  savedUsersInfo: PropTypes.array.isRequired,
+  setSavedUsersInfo: PropTypes.func.isRequired
 };
