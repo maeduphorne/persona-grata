@@ -43,7 +43,6 @@ Visit the deployed [Persona Grata page!]()
 
 ## Illustrations
 
-Full Screen App:  
 ![App](https://media.giphy.com/media/veeQiNJrD7tl49Ey1j/giphy.gif?cid=790b7611dec76110d41a1b2755d0e1060fad246b5a4341e0&rid=giphy.gif&ct=g)  
 
 ## Wins
