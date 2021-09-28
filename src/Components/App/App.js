@@ -33,7 +33,7 @@ const [savedUsersInfo, setSavedUsersInfo] = useState([])
         <Route 
           exact path='/savedUsers' 
           render={() =>
-            <div>
+            <div className="saved-user-page">
               <NavLink className='home-link' to='/'>Take Me Home</NavLink>
               <div className="main-section-wrapper">
                 <SuggestedQuestions />
