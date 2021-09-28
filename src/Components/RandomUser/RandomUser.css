@@ -19,3 +19,7 @@ button {
   font-size: large;
   font-weight: bold;
 }
+
+.instructions-and-user-wrapper {
+  margin-right: 10%;
+}

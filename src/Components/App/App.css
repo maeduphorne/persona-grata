@@ -17,7 +17,7 @@ h1 {
 .main-section-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .main-page-wrapper{
