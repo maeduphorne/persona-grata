@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Persona Grata
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+  - [Introduction](#Introduction)
+  - [Deployed Page](#Deployed-Page)
+  - [Learning Goals](#Learning-Goals)
+  - [Technologies](#Technologies)
+  - [Contributors](#Contributors)
+  - [Illustrations](#Illustrations)
+  - [Wins](#Wins)
+  - [Challenges & Improvements](#Challenges-&-Improvements)
+  - [Set Up](#Set-Up)
+  - [Sources](#Sources)
+  - [Project Specs](#Project-Specs)
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+Persona Grata is a User Persona generator built for the niche audience of a Turing Student running low on creativity. This project was assigned as a final solo project of Module 3 at [Turing School](turing.edu) and was completed within 5 days. This project was a showcase of lessons throughout the module - including React fundamentals, React Router, React Hooks and Cypress testing.
 
-### `npm start`
+When visiting the application, a user immediately views a randomly generated User Persona. The information includes an image, stats and the user's favorite quote. This information should allow a user to help create a User Persona in order to inspire creativity for app ideas. There are also suggested questions to ask about a user's persona to aid in brainstorming. A user is able to save a User Persona to favorites to come back to at a later point. The app user is able to navigate to a different page to view their saved User Personas, and then is able to come back to the home page to continue searching through users.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Deployed Page
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Visit the deployed [Persona Grata page!]()
 
-### `npm test`
+## Learning Goals
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Build upon and solidify the React foundations
+- Utilizes React Router for url navigation
+- Demonstrate user empathy through error handling and conditional rendering
+- Retrieve and display random users and quotes from 2 different APIS
+- Utilize PropTypes
+- Testing user flows using Cypress
 
-### `npm run build`
+## Technologies
+  - React
+  - Router
+  - CSS
+  - Cypress
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributors
+  - [Mae Duphorne](https://github.com/maeduphorne)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Illustrations
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Full Screen App:  
+<!-- ![App](https://media.giphy.com/media/fiAsrxOydWYlzl4cJl/giphy.gif)   -->
 
-### `npm run eject`
+## Wins
+  - Set an achievable MVP and reached the MVP goal
+  - Thorough testing using Cypress
+  - Using data down, actions up principles to enact a favoriting feature
+  - Close attention to User Experience - reflected in the routing and multiple ways to easily return to the main page
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Challenges & Improvements
+  - Implementing 2 APIs as one piece of state - learning to reorganize API data
+  - Troubleshooting async issues
+  - Possible future improvements:
+    - Create a backend to allow POSTs to the API so that user personas will persist
+    - Improve CSS for better user experience
+    - Add text input fields with the suggested questions and allow the app user to save input comments with their User Persona
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Set Up
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Fork this repo  
+2. Clone the repo to your local machine   
+3. Run `npm i`, then `npm start`
+4. View the project in the browser by opening localhost:3000 or through the deployed link
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Sources
+  - [MDN](http://developer.mozilla.org/en-US/)
+  - [W3Schools](https://www.w3schools.com/)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Specs
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
