@@ -44,7 +44,7 @@ Visit the deployed [Persona Grata page!]()
 ## Illustrations
 
 Full Screen App:  
-![App](<iframe src="https://giphy.com/embed/veeQiNJrD7tl49Ey1j" width="480" height="230" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/veeQiNJrD7tl49Ey1j">via GIPHY</a></p>)  
+![App](https://media.giphy.com/media/veeQiNJrD7tl49Ey1j/giphy.gif?cid=790b7611dec76110d41a1b2755d0e1060fad246b5a4341e0&rid=giphy.gif&ct=g)  
 
 ## Wins
   - Set an achievable MVP and reached the MVP goal
