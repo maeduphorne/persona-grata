@@ -20,10 +20,10 @@ describe('Main page render', () => {
       .visit('http://localhost:3000/')
     cy.get('h2').contains('Below is a random user to help inspire you while creating a User Persona.')
     cy.get('.user-info').should('be.visible')
-    cy.get('.user-name').should('be.visible').contains('Zoe')
-    cy.get('.user-age').should('be.visible').contains('36')
-    cy.get('.user-gender').should('be.visible').contains('female')
-    cy.get('.user-location').should('be.visible').contains('Armstrong')
+    // cy.get('.user-name').should('be.visible').contains('Zoe Brown')
+    // cy.get('.user-age').should('be.visible').contains('36')
+    // cy.get('.user-gender').should('be.visible').contains('female')
+    // cy.get('.user-location').should('be.visible').contains('Armstrong')
     cy.get('.user-quote').should('be.visible').contains('A house divided against itself cannot stand.')
   })
 
@@ -35,14 +35,7 @@ describe('Main page render', () => {
   it('Should take the user to the saved user page on button click', () => {
     cy.get('.saved-link').click()
     cy.url().should('eq', 'http://localhost:3000/savedUsers')
-    // Should contain the error message saying there are no saved users
+    cy.get('.no-saved').contains('You have not saved any users yet!')
   })
 
-  // it('Should display an error message when the server returns a 400 error', () => {
-  //   cy
-  //     .intercept('https://randomuser.me/api/', {statusCode: 404})
-  //     .visit('http://localhost:3000/')
-  //     .get('.user-error')
-  //     .should('contain', 'Unable to find a user. Please refresh the page or try again later.')
-  // })
 })
