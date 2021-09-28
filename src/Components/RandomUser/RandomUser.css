@@ -1,6 +1,6 @@
 
 h2 {
-  font-size: medium;
+  font-size: larger;
   text-align: center;
 }
 
@@ -18,4 +18,16 @@ button {
   color: white;
   font-size: large;
   font-weight: bold;
+}
+
+button:hover {
+  border: 3px solid #ACB4D7;
+}
+
+.instructions-and-user-wrapper {
+  margin-right: 10%;
+}
+
+.user-quote{
+  font-weight:600
 }
