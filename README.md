@@ -21,7 +21,7 @@ When visiting the application, a user immediately views a randomly generated Use
 
 ## Deployed Page
 
-Visit the deployed [Persona Grata page!]()
+Visit the deployed [Persona Grata page!](https://persona-grata-deploy.herokuapp.com/)
 
 ## Learning Goals
 
