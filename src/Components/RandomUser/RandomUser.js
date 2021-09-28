@@ -13,7 +13,21 @@ const RandomUser = ({ savedUsersInfo, setSavedUsersInfo }) => {
     return Promise.all([apiCalls.fetchRandomUser(), apiCalls.fetchRandomQuote()])
   }
 
-  const getRandomUser = () => {
+const handleNewUser = (event) => {
+  if(!btnIsToggled){
+    setbtnIsToggled(true)
+  } else {
+    setbtnIsToggled(false)
+  }
+}
+
+const handleSavedUsersClick = () => {
+  if(!savedUsersInfo.includes(userInfo)){
+    setSavedUsersInfo([...savedUsersInfo, userInfo])
+  }
+}
+
+useEffect(() => {
     let data;
     fetchUser()
     .then((promises) => {
@@ -35,24 +49,6 @@ const RandomUser = ({ savedUsersInfo, setSavedUsersInfo }) => {
       setUserInfo(data)
     })
     .catch(error => setUserInfoError('Unable to find a user. Please refresh the page or try again later.'))
-  }
-
-const handleNewUser = (event) => {
-  if(!btnIsToggled){
-    setbtnIsToggled(true)
-  } else {
-    setbtnIsToggled(false)
-  }
-}
-
-const handleSavedUsersClick = () => {
-  if(!savedUsersInfo.includes(userInfo)){
-    setSavedUsersInfo([...savedUsersInfo, userInfo])
-  }
-}
-
-useEffect(() => {
-  getRandomUser()
 }, [btnIsToggled])
 
 return (

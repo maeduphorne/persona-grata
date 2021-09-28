@@ -18,7 +18,7 @@ describe('Main page render', () => {
     cy.intercept('https://randomuser.me/api/', {fixture: 'userInfo-fixture.json'})
       .intercept('https://api.quotable.io/random?tags=famous-quotes', {fixture: 'userQuote-fixture.json'})
       .visit('http://localhost:3000/')
-    cy.get('h2').contains('Below is a random user for User Persona inspiration.')
+    cy.get('h2').contains('Below is a random user to help inspire you while creating a User Persona.')
     cy.get('.user-info').should('be.visible')
     cy.get('.user-name').should('be.visible').contains('Zoe')
     cy.get('.user-age').should('be.visible').contains('36')
