@@ -1,0 +1,12 @@
+.user-card-text{
+  word-wrap: break-word;
+}
+
+img {
+  width: 40%;
+  height: 25;
+  object-fit: cover;
+  overflow: clip;
+  height: 15em;
+  position: relative;
+}
