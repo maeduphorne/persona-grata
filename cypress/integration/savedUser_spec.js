@@ -41,3 +41,17 @@ describe('Saved User page render', () => {
     cy.get('.no-saved').contains('You have not saved any users yet!')
   })
 })
+
+describe('Route Error', () => {
+  it('Should display error if path is not correct', () => {
+    cy.visit('http://localhost:3000/hotdogs')
+    cy.get('.error-message').contains('Oops - something went wrong!')
+  })
+
+  it('Should give user the option to return home by clicking the header', () => {
+    cy.visit('http://localhost:3000/hotdogs')
+    cy.get('h1').click()
+    cy.url().should('eq', 'http://localhost:3000/')
+  })
+
+})
